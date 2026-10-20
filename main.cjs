@@ -29,6 +29,12 @@ const createWindow = () => {
         }
     });
 
+    win.webContents.session.setPermissionRequestHandler(
+    (webContents, permission, callback) => {
+        callback(permission === 'media')
+    }
+)
+
     win.loadURL('http://localhost:5173')
 }
 

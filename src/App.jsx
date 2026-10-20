@@ -4,10 +4,17 @@ import './App.css'
 function App() {
   const [dark, setDark] = useState(false)
   const videoRef = useRef(null)
-  const imageCaptureRef = useRef()
 
   async function setUpCamera() {
-    
+    try{
+      const videoStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+      })
+      if(videoStream) videoRef.current.srcObject = videoStream;
+    }catch(err){
+      console.log('Error', err);
+    }
   }
 
   async function setFullScreen() {
@@ -17,10 +24,6 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
   }, [dark])
-
-  async function getCamera() {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-  }
 
   return (
     <div className="permissions-container">
@@ -86,7 +89,7 @@ function App() {
 
         {/* video */}
         <div className="video-area">
-          <video className="live-preview" autoPlay muted playsInline></video>
+          <video className="live-preview" autoPlay muted playsInline ref={videoRef}></video>
           <div className="scan-overlay">
             <div className="scan-corner tl"></div>
             <div className="scan-corner tr"></div>
