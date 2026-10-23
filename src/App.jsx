@@ -272,58 +272,7 @@ function App() {
         </div>
       </div>
 
-      {/* ── Section 3: Capture Controls ── */}
-      <div className="section-header">
-        <span className="section-icon section-icon--outline">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-        </span>
-        <div className="section-meta">
-          <h2 className="section-title">Feed Capture</h2>
-          <p className="section-subtitle">
-            {isCapturing
-              ? `Capturing every 1s — Camera: ${captureCount.camera} | Screen: ${captureCount.screen}`
-              : 'Start capturing camera and screen feeds simultaneously'}
-          </p>
-        </div>
-      </div>
-
-      <div className="card fullscreen-card">
-        <p className="action-hint">
-          {isCapturing
-            ? 'Both camera and screen are being captured every second.'
-            : 'Ensure both camera and screen access are granted before starting capture.'}
-        </p>
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <button
-            className="btn btn--primary"
-            type="button"
-            onClick={startCapture}
-            disabled={isCapturing || !cameraReady || !screenReady}
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-            Start Capture
-          </button>
-          <button
-            className="btn btn--outline"
-            type="button"
-            onClick={stopCapture}
-            disabled={!isCapturing}
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
-            </svg>
-            Stop Capture
-          </button>
-        </div>
-      </div>
-
-      {/* ── Section 4: Switch to Fullscreen ── */}
+      {/* ── Section 3: Switch to Fullscreen ── */}
       <div className="section-header">
         <span className="section-icon section-icon--outline">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -354,7 +303,7 @@ function App() {
 
       {/* ── CTA ── */}
       <div className="cta-wrapper">
-        <button className="btn btn--cta" type="button">
+        <button className="btn btn--cta" type="button" onClick={startCapture} disabled={!cameraReady || !screenReady}>
           Go to Test
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="5" y1="12" x2="19" y2="12" />
