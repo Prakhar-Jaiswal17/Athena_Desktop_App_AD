@@ -1,0 +1,171 @@
+{
+  "testTitle": "Data Structures & Algorithms",
+  "totalTime": 7200,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the time complexity of accessing an element in an array by its index?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "answer": 0,
+      "marks": 2
+    },
+    {
+      "id": 2,
+      "question": "Which data structure uses LIFO (Last In First Out) principle?",
+      "options": ["Queue", "Stack", "Linked List", "Tree"],
+      "answer": 1,
+      "marks": 2
+    },
+    {
+      "id": 3,
+      "question": "What is the worst-case time complexity of Quick Sort?",
+      "options": ["O(n log n)", "O(n)", "O(n²)", "O(log n)"],
+      "answer": 2,
+      "marks": 3
+    },
+    {
+      "id": 4,
+      "question": "In a Binary Search Tree (BST), the left child of a node contains a value that is:",
+      "options": [
+        "Greater than the parent node",
+        "Equal to the parent node",
+        "Less than the parent node",
+        "Can be any value"
+      ],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 5,
+      "question": "Which traversal of a Binary Search Tree gives nodes in ascending order?",
+      "options": ["Preorder", "Postorder", "Inorder", "Level order"],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 6,
+      "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+      "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+      "answer": 3,
+      "marks": 2
+    },
+    {
+      "id": 7,
+      "question": "Which algorithm is used to find the shortest path in a weighted graph with non-negative edge weights?",
+      "options": [
+        "Depth First Search",
+        "Breadth First Search",
+        "Dijkstra's Algorithm",
+        "Kruskal's Algorithm"
+      ],
+      "answer": 2,
+      "marks": 3
+    },
+    {
+      "id": 8,
+      "question": "What is the maximum number of nodes at level 'l' of a binary tree?",
+      "options": ["2l", "2^l", "2l + 1", "l²"],
+      "answer": 1,
+      "marks": 3
+    },
+    {
+      "id": 9,
+      "question": "Which sorting algorithm has the best average-case time complexity?",
+      "options": ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 10,
+      "question": "A hash table with a good hash function has an average-case time complexity for search of:",
+      "options": ["O(n)", "O(n log n)", "O(1)", "O(log n)"],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 11,
+      "question": "Which data structure is used for implementing BFS (Breadth First Search)?",
+      "options": ["Stack", "Queue", "Priority Queue", "Linked List"],
+      "answer": 1,
+      "marks": 2
+    },
+    {
+      "id": 12,
+      "question": "What is the space complexity of Merge Sort?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+      "answer": 2,
+      "marks": 3
+    },
+    {
+      "id": 13,
+      "question": "The number of edges in a complete graph with n vertices is:",
+      "options": ["n(n-1)", "n(n-1)/2", "n²", "2n"],
+      "answer": 1,
+      "marks": 3
+    },
+    {
+      "id": 14,
+      "question": "Which of the following is NOT an application of Stack?",
+      "options": [
+        "Expression evaluation",
+        "Backtracking",
+        "CPU scheduling",
+        "Function call management"
+      ],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 15,
+      "question": "What is the height of a complete binary tree with n nodes?",
+      "options": ["O(n)", "O(n²)", "O(log n)", "O(n log n)"],
+      "answer": 2,
+      "marks": 3
+    },
+    {
+      "id": 16,
+      "question": "In dynamic programming, the technique of storing previously computed results is called:",
+      "options": ["Recursion", "Iteration", "Memoization", "Encapsulation"],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 17,
+      "question": "Which algorithm is used to detect a cycle in a linked list?",
+      "options": [
+        "Dijkstra's Algorithm",
+        "Floyd's Cycle Detection (Tortoise and Hare)",
+        "Kruskal's Algorithm",
+        "Binary Search"
+      ],
+      "answer": 1,
+      "marks": 3
+    },
+    {
+      "id": 18,
+      "question": "What is the best-case time complexity of Bubble Sort?",
+      "options": ["O(n²)", "O(n log n)", "O(n)", "O(1)"],
+      "answer": 2,
+      "marks": 2
+    },
+    {
+      "id": 19,
+      "question": "A Min-Heap is a complete binary tree where the parent node is:",
+      "options": [
+        "Greater than or equal to its children",
+        "Less than or equal to its children",
+        "Equal to its children",
+        "Less than its left child only"
+      ],
+      "answer": 1,
+      "marks": 3
+    },
+    {
+      "id": 20,
+      "question": "Which of the following algorithms uses the 'Divide and Conquer' paradigm?",
+      "options": ["Linear Search", "Bubble Sort", "Merge Sort", "Counting Sort"],
+      "answer": 2,
+      "marks": 3
+    }
+  ]
+}
