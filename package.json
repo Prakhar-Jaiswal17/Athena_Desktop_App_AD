@@ -1,7 +1,8 @@
 {
   "name": "athena",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Anti-cheat exam proctoring desktop platform",
   "type": "module",
   "main": "./main.cjs",
   "scripts": {
@@ -10,7 +11,37 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "chalo": "vite & electron ."
+    "dist": "vite build && electron-builder --mac dmg"
+  },
+  "build": {
+    "appId": "com.athena.examapp",
+    "productName": "Athena",
+    "icon": "build/icon.icns",
+    "files": [
+      "dist/**/*",
+      "db/**/*",
+      "main.cjs",
+      "preload.cjs"
+    ],
+    "mac": {
+      "category": "public.app-category.education",
+      "target": "dmg"
+    },
+    "dmg": {
+      "title": "Athena Installer",
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -22,6 +53,7 @@
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
     "electron": "^44.4.3",
+    "electron-builder": "^26.0.12",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.6",

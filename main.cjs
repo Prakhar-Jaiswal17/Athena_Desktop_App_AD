@@ -3,10 +3,13 @@ const path = require('path')
 const fs = require('fs')
 
 let win;
+const isDev = !app.isPackaged
 
-// Ensure output directories exist
-const cameraFeedDir = path.join(__dirname, 'cameraFeed')
-const screenFeedDir = path.join(__dirname, 'screenFeed')
+// In production, write feeds to userData (app bundle is read-only).
+// In dev, write next to the project root.
+const basePath = isDev ? __dirname : app.getPath('userData')
+const cameraFeedDir = path.join(basePath, 'cameraFeed')
+const screenFeedDir = path.join(basePath, 'screenFeed')
 if (!fs.existsSync(cameraFeedDir)) fs.mkdirSync(cameraFeedDir, { recursive: true })
 if (!fs.existsSync(screenFeedDir)) fs.mkdirSync(screenFeedDir, { recursive: true })
 
@@ -42,7 +45,11 @@ const createWindow = () => {
     }
 )
 
-    win.loadURL('http://localhost:5173')
+    if (isDev) {
+        win.loadURL('http://localhost:5173')
+    } else {
+        win.loadFile(path.join(__dirname, 'dist', 'index.html'))
+    }
 }
 
 // ── Save a camera frame (base64 data URL → JPEG file) ──
