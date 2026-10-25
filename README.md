@@ -147,7 +147,6 @@ Other users can open the `.dmg` and drag Athena into their Applications folder t
 
 | Command | What it does |
 |---|---|
-| `npm run chalo` | Starts Vite + Electron together |
 | `npm run dev` | Vite dev server only |
 | `npm start` | Electron only |
 | `npm run build` | Vite production build |
