@@ -149,6 +149,7 @@ Other users can open the `.dmg` and drag Athena into their Applications folder t
 |---|---|
 | `npm run dev` | Vite dev server only |
 | `npm start` | Electron only |
+| `npm run chalo` | Vite + Electron |
 | `npm run build` | Vite production build |
 | `npm run dist` | Build + package macOS `.dmg` installer |
 | `npm run lint` | ESLint |
